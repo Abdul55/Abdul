@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<string.h>
+#include<fcntl.h>
+#include<sys/stat.h>
+#include<sys/types.h>
+#include<unistd.h>
+int main()
+{
+int n=mkfifo("MyFIFO",0777);
+printf("%d",n);
+if(n==0)
+printf("Success\n);
+else
+printf("Failure\n");
+return 0;
+}
